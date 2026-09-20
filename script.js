@@ -740,7 +740,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Filtros de cordura (Sanity checks)
             if (!sample.events.turning_point || curr.time <= sample.events.turning_point.time + 30) continue; // Ignorar caída inicial y estabilización
-            if (ror < -15 || ror > 60 || ror === 0) continue; // Ignorar errores de digitación o ruido del sensor
+            if (ror < -15 || ror > 40 || ror === 0) continue; // Ignorar errores de digitación o ruido del sensor
 
             let faseActualKey = 'Equilibrio';
             if (sample.events.yellow && curr.time >= sample.events.yellow.time) {
